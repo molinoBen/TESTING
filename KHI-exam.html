@@ -9,12 +9,15 @@
   <body>
     <input type="text" placeholder="input String" class="js-string-input" />
     <input type="text" placeholder="input Character" class="js-char-input" />
-    <button onclick="console.log(`Output: ${inputString()}`)">INPUT</button>
+    <button onclick="console.log(`Output: ${inputString()}`)" class="js-btn">
+      INPUT
+    </button>
     <script>
       let out = 0;
       function inputString() {
         const inputString = document.querySelector('.js-string-input').value;
         const inputChar = document.querySelector('.js-char-input').value;
+        document.querySelector('.js-btn').disabled = true;
         const array = inputString.split('');
         array.forEach((inputs) => {
           if (inputs === inputChar) {
